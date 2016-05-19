@@ -3,9 +3,9 @@
 ## Install
 `npm i --save redux-method-middleware`
 
-## Usage
+## Setup
 
-```javascript
+```js
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import reduxMethodMiddleware from 'redux-method-middleware';
@@ -18,7 +18,10 @@ const store = createStore(
 );
 
 // Note passing middleware as the third argument requires redux@>=3.1.0
+```
 
+## Usage
+```js
 // implementation
 
 Store.dispatch({
@@ -29,3 +32,4 @@ Store.dispatch({
 });
 ```
 
+What this does will first dispatch to the store our action with `readyState` to loading. Our async method will be called and when the callback returns, if an error has occured we dispatch our action with `readyState` `error`. If all successful, `readyState` is `success`, and you're good to go. 
