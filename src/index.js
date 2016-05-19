@@ -6,7 +6,7 @@
  * The reducer shape should include { data, readyState } for use in the UI
  * @returns {Function}
  */
-export default function methodMiddleware() {
+export default function reduxMethodMiddleware() {
   return (next) => {
     return (action) => {
       const { method, ...rest } = action;
