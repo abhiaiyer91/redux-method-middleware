@@ -1,5 +1,5 @@
 {
-  "name": "npm-base",
+  "name": "redux-method-middleware",
   "version": "1.0.0",
   "description": "Similar to Promise Middleware, handle asynchronous callback functions via Redux Middleware",
   "repository": {
